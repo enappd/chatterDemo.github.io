@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">Business</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="contact" slot="icon-only" color="light"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="contentBg" #content id="chat-parent" overflow-scroll="true" (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($event)">
+  <div>
+    <div id="chat-container">
+      <span class="line-style"></span>
+      <hr>
+      <div class="message-wrap">
+        <div *ngFor="let msg of msgList;let i = index; let first = first; let last = last" class="message">
+
+          <div class="message-left" *ngIf="msg.userId == toUser">
+            <img class="user-img" [src]="msg.userAvatar">
+            <div class="msg-detail">
+              <div class="msg-content">
+                <p class="line-breaker ">{{msg.message}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="message-right" *ngIf="msg.userId == User">
+            <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+            <div class="msg-detail">
+              <div class="msg-info">
+              </div>
+              <div class="msg-content">
+                <p class="line-breaker  ">{{msg.message}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer class="footer">
+  <ion-toolbar class="footerSections">
+    <div class="containerFooter">
+      <div class="inputConatiner">
+        <ion-input class="placeholdertext inputMessage inputBg" type="text" placeholder="Type a message" [(ngModel)]="inp_text"
+          autofocus="true" padding-start></ion-input>
+      </div>
+      <div class="send-button-parent">
+        <ion-button (click)="sendMsg()" class="sendBtn" color="primary">
+          <ion-icon class="sendBtn-icon" name="send" color="light"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
