@@ -1,0 +1,51 @@
+/**
+ * Chatter - Chat themes Ionic 4 (https://www.enappd.com)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source .
+ * 
+ */
+
+
+
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+.ion-color-d3blue {
+  --ion-color-base: #0c96df;
+  --ion-color-base-rgb: 12, 150, 223;
+  --ion-color-contrast: #ffffff;
+  --ion-color-contrast-rgb: 255, 255, 255;
+  --ion-color-shade: #0f80cf;
+  --ion-color-tint: #1ba0ec;
+}
+.ion-color-d3green {
+  --ion-color-base: #00c06d;
+  --ion-color-base-rgb: 0, 192, 109;
+  --ion-color-contrast: #ffffff;
+  --ion-color-contrast-rgb: 255, 255, 255;
+  --ion-color-shade: #00c06d;
+  --ion-color-tint: #00c06d;
+}
+.searchbar-input{
+    border-radius: 25px !important;
+}
+.searchbar-search-icon.sc-ion-searchbar-md {
+       left: 88% !important;
+  }
+  .searchbar-clear-button.sc-ion-searchbar-md {
+    left: 13px !important;
+    right: 0 !important;
+  }
+

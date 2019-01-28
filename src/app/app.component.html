@@ -1,0 +1,45 @@
+<ion-app>
+  <ion-menu>
+    <ion-header translucent>
+      <ion-toolbar color="dark" >
+        <ion-title>Chat Themes</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen="true">
+      <div class="content ">
+        <ion-list lines="none" class="transparent">
+          <ion-list-header class="transparent">
+            <ion-label color="light">Chat List</ion-label>
+          </ion-list-header>
+          <div class="scrollContent transparent list-bottom-shadow">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item class="transparent" *ngFor="let p of ChatLists">
+                <ion-icon name="list" color="light" slot="start"></ion-icon>
+                <ion-label (click)="pageRedirect(p)" color="light">{{p.title}}</ion-label>
+                <ion-note *ngIf="p.type=='free'" color="light" class="notes">FREE</ion-note>
+              </ion-item>
+            </ion-menu-toggle>
+          </div>
+        </ion-list>
+
+        <div>
+          <ion-list lines="none" class="transparent">
+            <ion-list-header class="transparent">
+              <ion-label color="light">Chat Screens</ion-label>
+            </ion-list-header>
+            <div class="scrollContent transparent list-bottom-shadow">
+              <ion-menu-toggle auto-hide="false">
+                <ion-item class="transparent" *ngFor="let p of ChatScreens">
+                  <ion-icon name="chatboxes" color="light" slot="start"></ion-icon>
+                  <ion-label (click)="pageRedirect(p)" color="light">{{p.title}}</ion-label>
+                  <ion-note *ngIf="p.type=='free'" color="light" class="notes">FREE</ion-note>
+                </ion-item>
+              </ion-menu-toggle>
+            </div>
+          </ion-list>
+        </div>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,100 @@
+/**
+ * Chatter - Chat themes Ionic 4 (https://www.enappd.com)
+ *
+ * Copyright © 2018-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source .
+ * 
+ */
+
+
+
+
+.contentBg{
+    --background: #2f517c; /* fallback for old browsers */
+    --background: -webkit-linear-gradient(to bottom, #2f517c, #56b4d3); /* Chrome 10-25, Safari 5.1-6 */
+    --background: linear-gradient(to bottom, #2f517c, #56b4d3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-bottom: 0 !important;
+    --padding-bootm:0 !important;
+  }
+
+.onlineOffline_icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    // background-color: ;
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0;
+    border: 1.5px solid white;
+}
+.UserimgSection{
+    position: relative;
+}
+
+.userBadge{
+    border-radius: 90px;
+    width: 24px;
+    height: 24px;
+    background: #E0E9F9;
+    color: #789FE6;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    position: absolute;
+    top: 31px;
+}
+
+.usernameSection{
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 15px;
+}
+.descText{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:100%;
+    color:#BFC3C6;
+    font-size: 16px;
+}
+ion-img{
+    width: 90%;
+    height: 90%;
+}
+.listSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+}
+
+.borderBottomLine {
+    display: block;
+    width: 100%;
+    position: absolute;
+    border-bottom: 1px solid #cfcfd1;
+    height: 100%;
+    left: 21%;
+}
+.lastSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 73%;
+    padding-top:2px;
+}
+.fontSize{
+    font-size: 30px;
+}
+h5{
+    margin-bottom: 5px;
+    margin-top: 12px;
+    font-size: 16px;
+}
+ion-note{
+    font-size: 14px;
+}
